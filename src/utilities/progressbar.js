@@ -15,11 +15,20 @@ export function updateProgressBar() {
         // Subtract 1 for completed bad habits
         if (habit.type === "bad" && habit.completed) {
             completedHabits -= 1;
-            
+
         // Calculate percentage and clamp between 0-100
     const progressPercent = Math.max(0, Math.min(100, (completedHabits / totalHabits) * 100));
 
     // Update the progress bar width
     progressBar.style.width = `${progressPercent}%`;
+
+     if (progressPercent < 30) {
+      progressBar.style.backgroundColor = "#f44336"; // red
+      } else if (progressPercent < 50) {
+     progressBar.style.backgroundColor = "#ff9800"; // orange
+      } else {
+    progressBar.style.backgroundColor = "#4caf50"; // green
+  }
+
 }
 })}

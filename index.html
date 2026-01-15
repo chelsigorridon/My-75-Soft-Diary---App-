@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My 75 Soft Diary</title>
+    <link rel="stylesheet" href="styles.css">
+     <script type="module" src="src/script.js"></script>
 </head>
 <body>
     <main class="Main-body">
@@ -16,14 +18,21 @@
             </div>
         </section>
 
+        <div class="progress-container">
+            <h2>Track your progress!</h2>
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
         <section class="checklist"> 
-            <h2> Habits</h2>
-            <ul id="habitlist"></ul>
+            <h2>Daily Habits</h2>
+            <ul id="habit-list"></ul>
+            <label>
+             <input type="text" placeholder="Notes..."/> 
+             </label>
         </section>
 
-
-
+    
+      
     </main>
- <script src="src/script.js"></script>
 </body>
 </html>
